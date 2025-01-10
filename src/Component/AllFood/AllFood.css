@@ -1,0 +1,170 @@
+/* General container styling */
+.meal-search-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Better for most devices */
+  width: 90%; /* Adjusts width based on screen size */
+  box-sizing: border-box; /* Includes padding and border */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 90%; /* Adapts to screen size */
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Meals list styling */
+.meals-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* Meal item styling */
+.meal-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px); /* Three items per row */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+}
+
+.meal-item img {
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.meal-item h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.meal-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: left;
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-item:hover {
+  transform: scale(1.05);
+}
+
+/* Order form styling */
+.order-form {
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.order-form h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-form button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .meal-item {
+    width: calc(50% - 20px); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .meal-item {
+    width: calc(50% - 15px); /* Two items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .meal-item {
+    width: 100%; /* One item per row on very small screens */
+    margin-bottom: 20px;
+  }
+}

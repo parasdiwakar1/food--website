@@ -1,0 +1,152 @@
+/* General container styles */
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h2, h3 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Submitted feedback styles */
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item strong {
+  display: block;
+  font-size: 16px;
+  color: #007BFF;
+}
+
+.feedback-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+      max-width: 90%;
+      margin: 20px auto;
+      box-shadow: none;
+      border: 1px solid #ccc;
+  }
+
+  h2, h3 {
+      font-size: 18px;
+  }
+
+  button {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .feedback-item {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+  }
+
+  h2, h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+  }
+
+  button {
+      padding: 8px;
+      font-size: 12px;
+  }
+
+  input[type="text"],
+  textarea {
+      padding: 8px;
+      font-size: 12px;
+  }
+
+  .feedback-item {
+      padding: 15px;
+      font-size: 12px
+  }
+}

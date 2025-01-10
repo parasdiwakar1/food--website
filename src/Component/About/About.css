@@ -1,0 +1,77 @@
+/* Container styling */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f4f4f4; /* Light gray background for a clean look */
+  color: #333; /* Dark text for better readability */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the container */
+  border-radius: 12px; /* Smooth rounded edges for the container */
+}
+
+/* Images container */
+.about-images {
+  display: flex;
+  gap: 20px; /* Space between images */
+  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-bottom: 20px; /* Space below the images */
+}
+
+/* Individual image styling */
+.about-images img {
+  width: 100%; /* Full width responsiveness */
+  max-width: 320px; /* Limit the size of each image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.about-images img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Paragraph styling */
+.about-description {
+  font-size: 1rem; /* Comfortable font size */
+  line-height: 1.8; /* Improved line spacing */
+  text-align: justify; /* Neatly align text */
+  max-width: 900px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the text block */
+  padding: 20px; /* Add padding around the text */
+  color: #555; /* Softer text color for the paragraph */
+  background-color: #ffffff; /* White background for text */
+  border-radius: 10px; /* Rounded edges for the text block */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-images {
+    gap: 15px; /* Reduce spacing between images for smaller screens */
+  }
+
+  .about-description {
+    font-size: 0.95rem; /* Slightly smaller text */
+    padding: 15px; /* Adjust padding for compactness */
+  }
+
+  .about-images img {
+    max-width: 100%; /* Ensure images fit on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-description {
+    font-size: 0.9rem; /* Smaller text for very small screens */
+    padding: 10px; /* Compact padding */
+  }
+
+  .about-images img {
+    max-width: 100%; /* Fit images completely within smaller screens */
+  }
+}

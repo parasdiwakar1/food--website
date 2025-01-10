@@ -1,0 +1,36 @@
+/* Team container styling */
+.team-container {
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center the row horizontally */
+  align-items: center; /* Center images vertically */
+  gap: 20px; /* Increased space between images */
+  background-color: #f0f4f8; /* Light background color for contrast */
+  padding: 40px; /* Added more padding around the container */
+  border-radius: 15px; /* Slightly more rounded corners for a modern look */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Image styling within the container */
+.team-container img {
+  width: 120px; /* Increased width of the circle */
+  height: 120px; /* Increased height of the circle */
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid #007bff; /* Blue border for emphasis */
+  object-fit: cover; /* Ensures the image fits well inside the circle */
+  transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+/* Hover effect on images */
+.team-container img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Heading styling */
+h1 {
+  text-align: center; /* Center-align the heading */
+  font-size: 3rem; /* Adjusted font size */
+  color: #333; /* Dark color for text */
+  margin-bottom: 30px; /* Increased margin for spacing */
+  font-family: 'Arial', sans-serif; /* Clean font family */
+  text-transform: uppercase; /* Uppercase letters */
+}
