@@ -1,4 +1,3 @@
-/* General container styling */
 .meal-search-container {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -7,9 +6,9 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 1200px; /* Better for most devices */
-  width: 90%; /* Adjusts width based on screen size */
-  box-sizing: border-box; /* Includes padding and border */
+  max-width: 1200px;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -18,7 +17,7 @@ h1 {
 }
 
 input[type="text"] {
-  width: 90%; /* Adapts to screen size */
+  width: 90%;
   max-width: 500px;
   padding: 10px;
   margin: 10px auto;
@@ -55,7 +54,6 @@ button:hover {
   margin-top: 10px;
 }
 
-/* Meals list styling */
 .meals-list {
   display: flex;
   flex-wrap: wrap;
@@ -65,12 +63,11 @@ button:hover {
   padding: 0;
 }
 
-/* Meal item styling */
 .meal-item {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: calc(33.33% - 20px); /* Three items per row */
+  width: calc(33.33% - 20px);
   padding: 15px;
   text-align: center;
   transition: transform 0.3s;
@@ -104,7 +101,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Order form styling */
 .order-form {
   margin-top: 10px;
   background-color: #f1f1f1;
@@ -131,10 +127,9 @@ button:hover {
   background-color: #218838;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 1024px) {
   .meal-item {
-    width: calc(50% - 20px); /* Two items per row on medium screens */
+    width: calc(50% - 20px);
   }
 }
 
@@ -144,7 +139,7 @@ button:hover {
   }
 
   .meal-item {
-    width: calc(50% - 15px); /* Two items per row */
+    width: calc(50% - 15px);
   }
 }
 
@@ -164,7 +159,7 @@ button:hover {
   }
 
   .meal-item {
-    width: 100%; /* One item per row on very small screens */
+    width: 100%;
     margin-bottom: 20px;
   }
 }

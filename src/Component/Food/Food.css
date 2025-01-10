@@ -1,10 +1,9 @@
-/* General container for each block */
 .food_Text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 60px; /* Space around the block */
-  padding: 20px; /* Space inside the block */
+  margin: 40px 60px;
+  padding: 20px;
   flex-wrap: wrap;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -15,7 +14,6 @@
   animation-delay: 0.2s;
 }
 
-/* Animation for fade-in and upward movement */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -27,13 +25,11 @@
   }
 }
 
-/* Styling for the FoodAbout section */
 .FoodAbout {
   text-align: center;
   margin: 20px;
 }
 
-/* Individual content inside the container */
 .food_Text div {
   width: 48%;
   box-sizing: border-box;
@@ -54,7 +50,6 @@
   }
 }
 
-/* Text styling */
 .food_Text p {
   font-size: 1.125rem;
   line-height: 1.8;
@@ -71,7 +66,6 @@
   animation-delay: 0.7s;
 }
 
-/* Image styling */
 .food_Text img {
   width: 100%;
   max-width: 600px;
@@ -86,9 +80,6 @@
   animation-delay: 1s;
 }
 
-/* Responsive Design */
-
-/* Tablet view */
 @media (max-width: 768px) {
   .food_Text {
     margin: 20px;
@@ -112,7 +103,6 @@
   }
 }
 
-/* Mobile view */
 @media (max-width: 480px) {
   .food_Text {
     padding: 10px;

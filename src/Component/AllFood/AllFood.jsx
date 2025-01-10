@@ -5,9 +5,9 @@ const FoodSearch = () => {
   const [meal, setMeal] = useState("");
   const [mealsList, setMealsList] = useState([]);
   const [error, setError] = useState(null);
-  const [orderedMeals, setOrderedMeals] = useState([]); // Track ordered meals by ID
+  const [orderedMeals, setOrderedMeals] = useState([]); 
 
-  // Function to fetch meals from the API
+  
   const fetchMeals = async (searchTerm = "") => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`;
 

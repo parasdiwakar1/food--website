@@ -1,4 +1,4 @@
-/* Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -11,7 +11,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar Styling */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ body {
   font-weight: bold;
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -119,7 +119,7 @@ body {
     top: 60px;
     right: 0;
     background: rgba(6, 81, 127, 0.95);
-    width: 100%;
+    width: 95%;
     padding: 20px;
     text-align: center;
   }

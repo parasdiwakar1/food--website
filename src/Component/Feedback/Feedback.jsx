@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./Feedback.css"; // Import the CSS
+import "./Feedback.css"; 
 
 const FeedbackForm = () => {
-  // State for the form inputs
+
   const [name, setName] = useState("");
   const [feedback, setFeedback] = useState("");
   const [submittedFeedback, setSubmittedFeedback] = useState([]);
 
-  // Handle form submission
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
