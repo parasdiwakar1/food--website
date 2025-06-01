@@ -1,152 +1,172 @@
-/* General container styles */
+/* Root font settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
 .container {
-  padding: 20px;
   max-width: 600px;
-  margin: 40px auto;
-  font-family: Arial, sans-serif;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   color: #333;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading styles */
 h2, h3 {
   text-align: center;
-  color: #007BFF;
   margin-bottom: 20px;
 }
 
-/* Form styles */
+h2 {
+  font-size: 28px;
+  color: #1e3a8a;
+}
+
+h3 {
+  font-size: 22px;
+  color: #2563eb;
+}
+
+/* Form layout */
 form {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Form group */
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Label */
 label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
 }
 
+/* Inputs */
 input[type="text"],
 textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: inherit;
-  transition: border-color 0.2s ease;
+  padding: 12px 14px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
 input[type="text"]:focus,
 textarea:focus {
-  border-color: #007BFF;
+  border-color: #2563eb;
+  background-color: #fff;
   outline: none;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
 }
 
+/* Button */
 button {
-  width: 100%;
-  background-color: #007BFF;
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
   color: white;
-  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  padding: 14px;
   font-size: 16px;
   font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: scale(1.02);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 button:active {
   transform: scale(0.98);
 }
 
-/* Submitted feedback styles */
+/* Submitted feedback list */
 .feedback-list {
+  margin-top: 20px;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
+/* Feedback item */
 .feedback-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f1f5f9;
+  border-left: 5px solid #2563eb;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .feedback-item strong {
-  display: block;
+  color: #1e40af;
   font-size: 16px;
-  color: #007BFF;
+  margin-bottom: 6px;
+  display: block;
 }
 
 .feedback-item p {
+  color: #374151;
   font-size: 14px;
-  color: #555;
-  margin: 5px 0 0;
+  margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-      padding: 15px;
-      max-width: 90%;
-      margin: 20px auto;
-      box-shadow: none;
-      border: 1px solid #ccc;
+    padding: 20px;
+    margin: 40px 16px;
   }
 
-  h2, h3 {
-      font-size: 18px;
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 
   button {
-      padding: 10px;
-      font-size: 14px;
-  }
-
-  .feedback-item {
-      font-size: 14px;
+    font-size: 14px;
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-      padding: 10px;
+  h2 {
+    font-size: 20px;
   }
 
-  h2, h3 {
-      font-size: 16px;
-      margin-bottom: 15px;
-  }
-
-  button {
-      padding: 8px;
-      font-size: 12px;
+  h3 {
+    font-size: 16px;
   }
 
   input[type="text"],
   textarea {
-      padding: 8px;
-      font-size: 12px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 10px;
   }
 
   .feedback-item {
-      padding: 15px;
-      font-size: 12px
+    padding: 12px 16px;
+    font-size: 13px;
   }
 }
