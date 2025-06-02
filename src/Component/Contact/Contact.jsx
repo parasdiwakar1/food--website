@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Contact.css'; 
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,56 +21,51 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you! Feel free to reach out with any questions or comments.</p>
+    <div className="contact-page">
+      <div className="contact-wrapper">
+        {/* Image Section */}
+        <div className="contact-image-section">
+          <img src="./food.jpg" alt="Contact Visual" />
+        </div>
 
-      <div className="contact-content">
-        {/* Contact Form */}
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        {/* Form Section */}
+        <div className="contact-form-section">
+          <h2>Get in Touch</h2>
+          <p>Have a question, comment, or just want to say hello? We'd love to hear from you.</p>
 
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+            {submitted && <p className="success">Thank you! We'll respond soon.</p>}
+          </form>
 
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-
-          <button type="submit">Send Message</button>
-
-          {submitted && <p className="success-message">Thank you for reaching out! We'll get back to you soon.</p>}
-        </form>
-
-        {/* Additional Contact Information */}
-        <div className="contact-info">
-          <h3>Contact Information</h3>
-          <p><strong>Address:</strong> Pune </p>
-          <p><strong>Phone:</strong> +91-1234567890</p>
-          <p><strong>Email:</strong> support@example.com</p>
+          <div className="contact-details">
+            <p><strong> Address:</strong> Pune, Maharashtra</p>
+            <p><strong> Phone:</strong> +91-1234567890</p>
+            <p><strong> Email:</strong> support@example.com</p>
+          </div>
         </div>
       </div>
     </div>

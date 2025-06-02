@@ -1,121 +1,130 @@
-/* Container for the login form */
-.login-container {
-  width: 100%;
-  max-width: 400px; /* Max width for the form */
-  margin: 50px auto; /* Centering the form */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 170px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Styling for the form title */
-.login-container h2 {
-  text-align: center;
-  font-size: 24px;
-  color: #333;
+.login-box {
+  display: flex;
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-image {
+  flex: 1;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-form-section {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.login-form-section h2 {
+  font-size: 28px;
   margin-bottom: 10px;
+  color: #333;
 }
 
-/* Description text */
-.login-description {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
+.login-subtext {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
   margin-bottom: 20px;
 }
 
-/* Styling for the input fields */
-.input-container {
-  margin-bottom: 20px;
-}
-
-.input-container label {
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
   display: block;
-  font-size: 14px;
   color: #333;
-  margin-bottom: 5px;
 }
 
-.input-container input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
+.form-group input {
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.input-container input:focus {
-  outline: none;
-  border-color: #4caf50; /* Green border when focused */
-}
-
-/* Styling for the error message */
-.error-message {
-  color: red;
+  border-radius: 8px;
   font-size: 14px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Styling for the success message */
-.success-message {
-  color: green;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Styling for the submit button */
-.submit-btn {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #4caf50; /* Green button */
+}
+
+button {
+  padding: 12px;
+  background-color: #007bff;
   color: white;
+  font-size: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
-.submit-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
+button:hover {
+  background-color: #0056b3;
 }
 
-.submit-btn:disabled {
-  background-color: #ddd; /* Disabled button color */
-  cursor: not-allowed;
+.error-message {
+  color: #e53935;
+  margin-bottom: 10px;
 }
 
-/* Links section */
-.login-footer {
-  text-align: center;
+.success-message {
+  color: #43a047;
+  margin-bottom: 10px;
+}
+
+.login-links {
   margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.forgot-password a, .signup-link a {
-  color: #4caf50;
+.login-links a {
+  color: #007bff;
   text-decoration: none;
 }
 
-.forgot-password a:hover, .signup-link a:hover {
+.login-links a:hover {
   text-decoration: underline;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 480px) {
-  .login-container {
-    padding: 15px; /* Less padding on smaller screens */
+/* Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
   }
 
-  .submit-btn {
-    font-size: 14px; /* Smaller button text */
+  .login-image {
+    height: 200px;
   }
 
-  .login-description {
-    font-size: 12px; /* Smaller description text */
+  .login-form-section {
+    padding: 30px 20px;
   }
 }
