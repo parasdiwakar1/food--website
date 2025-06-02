@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { ChefHat, Search, Clock, MapPin, Youtube, ExternalLink, Heart, Star, Users } from "lucide-react";
+import {
+  ChefHat,
+  Search,
+  Clock,
+  MapPin,
+  Youtube,
+  ExternalLink,
+  Heart,
+  Star,
+  Users,
+} from "lucide-react";
 import "./AllFood.css";
 const FoodSearch = () => {
   const [meal, setMeal] = useState("");
@@ -40,7 +50,7 @@ const FoodSearch = () => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       searchMeals();
     }
   };
@@ -48,14 +58,14 @@ const FoodSearch = () => {
   const orderFood = (mealId) => {
     setOrderedMeals((prev) => [...prev, mealId]);
     setTimeout(() => {
-      setOrderedMeals((prev) => prev.filter(id => id !== mealId));
+      setOrderedMeals((prev) => prev.filter((id) => id !== mealId));
     }, 3000);
   };
 
   const toggleDetails = (mealId) => {
     setExpandedMeals((prev) =>
       prev.includes(mealId)
-        ? prev.filter(id => id !== mealId)
+        ? prev.filter((id) => id !== mealId)
         : [...prev, mealId]
     );
   };
@@ -63,7 +73,7 @@ const FoodSearch = () => {
   const toggleFavorite = (mealId) => {
     setFavorites((prev) =>
       prev.includes(mealId)
-        ? prev.filter(id => id !== mealId)
+        ? prev.filter((id) => id !== mealId)
         : [...prev, mealId]
     );
   };
@@ -81,7 +91,7 @@ const FoodSearch = () => {
       if (ingredient && ingredient.trim() !== "") {
         ingredients.push({
           ingredient: ingredient.trim(),
-          measure: measure ? measure.trim() : ""
+          measure: measure ? measure.trim() : "",
         });
       }
     }
@@ -95,16 +105,15 @@ const FoodSearch = () => {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <ChefHat className="w-12 h-12 text-orange-500 mr-3" />
-            <h2 >
-              Delicious Meals
-            </h2>
+            <h2>Delicious Meals</h2>
           </div>
-          <p className="text-gray-600 text-lg">Discover amazing recipes from around the world</p>
+          <p className="text-gray-600 text-lg">
+            Discover amazing recipes from around the world
+          </p>
         </div>
 
-        {/* Search Section */}
         <div className="max-w-2xl mx-auto mb-12">
-          <div className="relative flex items-center bg-white rounded-2xl shadow-lg border-2 border-orange-100 hover:border-orange-300 transition-all duration-300">
+          <div style={{ display: "flex", gap: "10px" }}>
             <input
               type="text"
               placeholder="Search for delicious meals..."
@@ -159,54 +168,55 @@ const FoodSearch = () => {
                       alt={mealItem.strMeal}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                   <div
-  style={{
-    position: "absolute",
-    top: "1rem",
-    right: "1rem",
-    display: "flex",
-    gap: "0.5rem",
-  }}
->
-  <button
-    onClick={() => toggleFavorite(mealItem.idMeal)}
-    style={{
-      padding: "0.5rem",
-      borderRadius: "9999px",
-      backdropFilter: "blur(4px)",
-      backgroundColor: "transparent",
-      border: "none",
-      cursor: "pointer",
-      transition: "all 0.3s ease",
-    }}
-  >
-    <Heart
-      style={{
-        width: "1.25rem",
-        height: "1.25rem",
-        color: isFavorite ? "#ef4444" : "#ffffff", 
-        fill: isFavorite ? "currentColor" : "none",
-        transition: "color 0.3s ease, fill 0.3s ease",
-        backgroundColor: "transparent",
-      }}
-    />
-  </button>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "1rem",
+                        right: "1rem",
+                        display: "flex",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      <button
+                        onClick={() => toggleFavorite(mealItem.idMeal)}
+                        style={{
+                          padding: "0.5rem",
+                          borderRadius: "9999px",
+                          backdropFilter: "blur(4px)",
+                          backgroundColor: "transparent",
+                          border: "none",
+                          cursor: "pointer",
+                          transition: "all 0.3s ease",
+                        }}
+                      >
+                        <Heart
+                          style={{
+                            width: "1.25rem",
+                            height: "1.25rem",
+                            color: isFavorite ? "#ef4444" : "#ffffff",
+                            fill: isFavorite ? "currentColor" : "none",
+                            transition: "color 0.3s ease, fill 0.3s ease",
+                            backgroundColor: "transparent",
+                            border: "none",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </button>
 
-  <div
-    style={{
-      padding: "0.25rem 0.75rem",
-     
-      color: "white",
-      fontSize: "0.875rem",
-      fontWeight: "500",
-      borderRadius: "9999px",
-      backdropFilter: "blur(4px)",
-    }}
-  >
-    {mealItem.strArea || "International"}
-  </div>
-</div>
+                      <div
+                        style={{
+                          padding: "0.25rem 0.75rem",
 
+                          color: "white",
+                          fontSize: "0.875rem",
+                          fontWeight: "500",
+                          borderRadius: "9999px",
+                          backdropFilter: "blur(4px)",
+                        }}
+                      >
+                        {mealItem.strArea || "International"}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Content */}
@@ -240,8 +250,7 @@ const FoodSearch = () => {
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">
                       {isExpanded
                         ? mealItem.strInstructions
-                        : truncateText(mealItem.strInstructions)
-                      }
+                        : truncateText(mealItem.strInstructions)}
                     </p>
 
                     {/* Ingredients (shown when expanded) */}
@@ -253,13 +262,20 @@ const FoodSearch = () => {
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
                           {ingredients.map((item, index) => (
-                            <div key={index} className="flex justify-between text-sm">
-                              <span className="text-gray-700">{item.ingredient}</span>
-                              <span className="text-gray-500 font-medium">{item.measure}</span>
+                            <div
+                              key={index}
+                              className="flex justify-between text-sm"
+                            >
+                              <span className="text-gray-700">
+                                {item.ingredient}
+                              </span>
+                              <span className="text-gray-500 font-medium">
+                                {item.measure}
+                              </span>
                             </div>
                           ))}
                         </div>
-                        
+
                         {/* YouTube Link */}
                         {mealItem.strYoutube && (
                           <div className="mt-4">
@@ -270,7 +286,9 @@ const FoodSearch = () => {
                               className="inline-flex items-center space-x-2 text-red-600 hover:text-red-700 transition-colors duration-300"
                             >
                               <Youtube className="w-4 h-4" />
-                              <span className="text-sm font-medium">Watch Recipe Video</span>
+                              <span className="text-sm font-medium">
+                                Watch Recipe Video
+                              </span>
                               <ExternalLink className="w-3 h-3" />
                             </a>
                           </div>
@@ -286,7 +304,7 @@ const FoodSearch = () => {
                       >
                         {isExpanded ? "Show Less" : "More Details"}
                       </button>
-                      
+
                       <button
                         onClick={() => orderFood(mealItem.idMeal)}
                         disabled={isOrdered}
@@ -319,8 +337,12 @@ const FoodSearch = () => {
               <div className="mb-4">
                 <ChefHat className="w-16 h-16 text-gray-400 mx-auto" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No meals found</h3>
-              <p className="text-gray-500">Try searching for a different dish!</p>
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">
+                No meals found
+              </h3>
+              <p className="text-gray-500">
+                Try searching for a different dish!
+              </p>
             </div>
           )
         )}

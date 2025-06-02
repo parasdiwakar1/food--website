@@ -42,7 +42,7 @@ body {
 
 .min-h-screen {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+  /* background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%); */
   position: relative;
   margin-top: 90px;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 .bg-gradient-to-br {
-  background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+  /* background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%); */
 }
 
 .py-8 {
